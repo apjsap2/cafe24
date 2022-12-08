@@ -36,10 +36,24 @@ app.engine('ejs', ejsMate)
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
+
+
+
 app.get('/', (req, res) => {
-	const cssUrl = 'none'
-	res.render('index', {cssUrl})
+	res.render('temp_index'})
 })
+
+
+//   이하 cafe24에서 temp_index.ejs를 메인 첫 화면으로 사용하기 위해 주석처리 하였음.
+
+
+// app.get('/', (req, res) => {
+// 	const cssUrl = 'none'
+// 	res.render('index', {cssUrl})
+// })
+
+
+//   이상 cafe24에서 temp_index.ejs를 메인 첫 화면으로 사용하기 위해 주석처리 하였음.
 
 
 app.get('/apps/comments/:id/edit', async (req, res) => {
