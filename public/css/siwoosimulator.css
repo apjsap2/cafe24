@@ -9,7 +9,6 @@
     position: absolute;
     top: 488px;
     left: 25px;
-    margin: auto;
     border-radius: 10px;
     opacity: 0.5;
 }
@@ -34,4 +33,42 @@
     top: 520px;
     left: 40px;
     color: white;
+}
+
+#select-background {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 300px;
+    left: 70px;
+    background-color: rgba(94, 94, 94, 0.5);
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 5px 5px;
+    box-sizing: border-box;
+}
+
+
+
+#menu1 {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    left: 85px;
+    top: 335px;
+    color: white;
+    font-weight: bold;
+}
+
+#menu2 {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    left: 85px;
+    top: 367px;
+    color: white;
+    font-weight: bold;
 }
