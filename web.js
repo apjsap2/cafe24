@@ -18,7 +18,13 @@ app.use(methodOverride('_method'))
 
 
 app.get('/', (req, res) => {
-	res.render('index')
+	cssUrl = 'none'
+	res.render('welcomepage', {cssUrl})
+})
+
+app.get('/siwoo/simulator', (req, res) => {
+	const cssUrl = '/css/siwoosimulator.css'
+	res.render('siwoosimulator', {cssUrl})
 })
 
 app.listen(PORT, () => {
