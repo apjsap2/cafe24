@@ -1,0 +1,23 @@
+div {
+    margin: 5px 2px;
+    padding: 0px;
+    font-size: 5px;
+}
+
+#box {
+    display: flex;
+}
+
+#box div {
+    width: 40px;
+    height: 30px;
+    border: 1px black solid;
+}
+
+#box > div {
+    display: inline-block;
+}
+
+#box > div > div:first-child {
+    margin-top: 25px;
+}

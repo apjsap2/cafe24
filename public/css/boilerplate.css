@@ -1,7 +1,12 @@
-.boilerplate-wrapper {
+.boilerplate-wrapper-for-mobile {
     width: 350px;
     height: 650px;
     margin: auto;
     position: relative;
     padding: 0px;
+}
+
+.boilerplate-wrapper-for-wide {
+    padding: 0px;
+    border-radius: 10px;
 }

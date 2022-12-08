@@ -86,5 +86,5 @@ const orderList = [
 
 const wrongAnswerList = [
     {n: 0, text: '틀렸습니다. 다시 선택하세요'},
-    {n: 0, text: '틀렸습니다. 체력이 넘치시나보군요. 다시 선택 하세요'},
+    {n: 1, text: '틀렸습니다. 체력이 넘치시나보군요. 다시 선택 하세요'},
 ]

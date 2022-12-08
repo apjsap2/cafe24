@@ -29,6 +29,12 @@ app.get('/siwoo/simulator', (req, res) => {
 	res.render('siwoosimulator', {cssUrl, jsUrl})
 })
 
+app.get('/duty', (req, res) => {
+	const cssUrl = '/css/duty.css'
+	const jsUrl = '/js/duty.js'
+	res.render('duty_index', {cssUrl, jsUrl})
+})
+
 app.listen(PORT, () => {
 	console.log(`Express listening on port ${PORT} now`)
 })
