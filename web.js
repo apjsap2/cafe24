@@ -40,7 +40,7 @@ app.use(methodOverride('_method'))
 
 
 app.get('/', (req, res) => {
-	res.render('temp_index'})
+	res.render('temp_index')
 })
 
 
