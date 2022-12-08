@@ -32,7 +32,7 @@ function menuTouch1() {
         indexOfOrder ++
         nextOrder()
     } else {
-        $content_field.textContent = wrongAnswerList[id]
+        $content_field.textContent = wrongAnswerList[id].text
         offSelect()
 
     }
@@ -78,9 +78,13 @@ const orderList = [
     {type : 'text', name: '', text: '2022년 8월 9일 오후 4시 16분. 3.53kg의 최시우가 태어났습니다'},
     {type : 'select', id: 0, name: '', a: '1. 기쁨의 눈물을 흘린다.', b: '2. 도망간다', best: '1. 기쁨의 눈물을 흘린다.'},
     {type : 'text', name: '최시우', text: '탁월한 선택입니다. 훌륭한 부모님이 되시겠군요(짝짝짝짝!!)'},
-
+    {type : 'text', name: '', text: '산후조리원에 입소 했습니다'},
+    {type : 'text', name: '', text: '시우가 울음을 멈추지 않습니다. 어떻게 해야 할까요?'},
+    {type : 'select', id: 1, name: '', a: '1. 울음을 달래본다', b: '2. 신생아실에 데려다 준다', best: '2. 신생아실에 데려다 준다'},
+    {type : 'text', name: '', text: '끝입니다.'},
 ]
 
 const wrongAnswerList = [
-    {n: 0, text: '틀렸습니다. 다시 선택하세요'}
+    {n: 0, text: '틀렸습니다. 다시 선택하세요'},
+    {n: 0, text: '틀렸습니다. 체력이 넘치시나보군요. 다시 선택 하세요'},
 ]
