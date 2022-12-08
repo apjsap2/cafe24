@@ -7,23 +7,80 @@ const $menu2 = document.querySelector('#menu2')
 const $button_textbox_background = document.querySelector('#button-textbox-background')
 
 
-
-let indexForNextOrder = 0
+indexOfOrder = 0
 function nextOrder() {
+    if (orderList[indexOfOrder].type === 'text') {
+        $content_field.textContent = orderList[indexOfOrder].text
+        indexOfOrder ++
+    } else {
+        onSelect()
 
-    $content_field.textContent = orderList[indexForNextOrder]
-    indexForNextOrder ++
+        $menu1.textContent = orderList[indexOfOrder].a
+        $menu2.textContent = orderList[indexOfOrder].b
+    }
 }
 
+let answer = ''
 
-$button_textbox_background.addEventListener('click', () => {
-    alert('cdsaasdc')
-})
+function menuTouch1() {
+    console.log('menu1 touched')
+    let id = orderList[indexOfOrder].id
+    answer = orderList[indexOfOrder].a
+    if (answer === orderList[indexOfOrder].best) {
+
+        offSelect()
+        indexOfOrder ++
+        nextOrder()
+    } else {
+        $content_field.textContent = wrongAnswerList[id]
+        offSelect()
+
+    }
+}
+
+function menuTouch2() {
+    console.log('menu2 touched')
+    let id = orderList[indexOfOrder].id
+    answer = orderList[indexOfOrder].b
+    console.log(answer)
+    if (answer === orderList[indexOfOrder].best) {
+
+        offSelect()
+        indexOfOrder ++
+        nextOrder()
+    } else {
+        $content_field.textContent = wrongAnswerList[id].text
+        offSelect()
 
 
+    }
+}
 
+$menu1.addEventListener('touchstart', menuTouch1)
+$menu2.addEventListener('touchstart', menuTouch2)
+
+$button_textbox_background.addEventListener('touchstart', nextOrder)
+
+function offSelect() {
+    $select_background.className = 'hidden'
+    $menu1.className = 'hidden'
+    $menu2.className = 'hidden'
+}
+
+function onSelect() {
+    $select_background.className = 'visible'
+    $menu2.className = 'visible'
+    $menu1.className = 'visible'
+}
 
 const orderList = [
-    '2022년 8월 9일 오후 4시 16분. 3.53kg의 최시우가 태어났습니다',
-    '탁월한 선택입니다. 훌륭한 부모님이 되시겠군요(짝짝짝짝!!)'
+    {type : 'text', name: '???', text: '그럼, 게임을 시작하지.'},
+    {type : 'text', name: '', text: '2022년 8월 9일 오후 4시 16분. 3.53kg의 최시우가 태어났습니다'},
+    {type : 'select', id: 0, name: '', a: '1. 기쁨의 눈물을 흘린다.', b: '2. 도망간다', best: '1. 기쁨의 눈물을 흘린다.'},
+    {type : 'text', name: '최시우', text: '탁월한 선택입니다. 훌륭한 부모님이 되시겠군요(짝짝짝짝!!)'},
+
+]
+
+const wrongAnswerList = [
+    {n: 0, text: '틀렸습니다. 다시 선택하세요'}
 ]

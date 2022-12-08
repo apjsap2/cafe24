@@ -1,16 +1,15 @@
 #born {
-    opacity: 0.7;
+    /* opacity: 0.5; */
 }
 
 #textbox-background {
-    background-color: rgb(94, 94, 94);
+    background-color: rgba(94, 94, 94, 0.5);
     width: 300px;
     height: 150px;
     position: absolute;
     top: 488px;
     left: 25px;
     border-radius: 10px;
-    opacity: 0.5;
 }
 
 #name-field {
@@ -81,6 +80,7 @@
     height: 150px;
     top: 488px;
     left: 25px;
+
     opacity: 0;
 }
 
