@@ -39,39 +39,73 @@ const membersGroup = {
 
 let dayOfMonth = 31
 
-let needDutyFull = [  //아직 사용 안하고 있음. 삭제해도 됨
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N', 'MD'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
-    ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
- ]
+let needDutyFull = [
+    {date: 1, D: 1, E: 3, N: 3, MD: 1},
+    {date: 2, D: 3, E: 3, N: 3, MD: 0},
+    {date: 3, D: 3, E: 3, N: 3, MD: 0},
+    {date: 4, D: 3, E: 3, N: 3, MD: 0},
+    {date: 5, D: 3, E: 3, N: 3, MD: 0},
+    {date: 6, D: 3, E: 3, N: 3, MD: 0},
+    {date: 7, D: 3, E: 3, N: 3, MD: 0},
+    {date: 8, D: 3, E: 3, N: 3, MD: 0},
+    {date: 9, D: 3, E: 3, N: 3, MD: 0},
+    {date: 10, D: 3, E: 3, N: 3, MD: 0},
+    {date: 11, D: 3, E: 3, N: 3, MD: 0},
+    {date: 12, D: 3, E: 3, N: 3, MD: 0},
+    {date: 13, D: 3, E: 3, N: 3, MD: 0},
+    {date: 14, D: 3, E: 3, N: 3, MD: 0},
+    {date: 15, D: 3, E: 3, N: 3, MD: 0},
+    {date: 16, D: 3, E: 3, N: 3, MD: 0},
+    {date: 17, D: 3, E: 3, N: 3, MD: 0},
+    {date: 18, D: 3, E: 3, N: 3, MD: 0},
+    {date: 19, D: 3, E: 3, N: 3, MD: 0},
+    {date: 20, D: 3, E: 3, N: 3, MD: 0},
+    {date: 21, D: 3, E: 3, N: 3, MD: 0},
+    {date: 22, D: 3, E: 3, N: 3, MD: 0},
+    {date: 23, D: 3, E: 3, N: 3, MD: 0},
+    {date: 24, D: 3, E: 3, N: 3, MD: 0},
+    {date: 25, D: 3, E: 3, N: 3, MD: 0},
+    {date: 26, D: 3, E: 3, N: 3, MD: 0},
+    {date: 27, D: 3, E: 3, N: 3, MD: 0},
+    {date: 28, D: 3, E: 3, N: 3, MD: 0},
+    {date: 29, D: 3, E: 3, N: 3, MD: 0},
+    {date: 30, D: 3, E: 3, N: 3, MD: 0},
+    {date: 31, D: 3, E: 3, N: 3, MD: 0},
+]
+
+// let needDutyFull = [  
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N', 'MD'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//     ['D', 'D', 'D', 'E', 'E', 'E', 'N', 'N', 'N'],
+//  ]
 
 
 let dutyResult = []
@@ -178,7 +212,49 @@ function dutyResultToEJS() {   // 일단 테스트 위해 사용하고 있는 �
     }
 } 
 
-
+function isDone(date, duty) {
+    const index = date - 1
+    const needDayCount = needDutyFull[index].D
+    const needEveningCount = needDutyFull[index].E
+    const needNightCount = needDutyFull[index].N
+    const needMidDayCount = needDutyFull[index].MD
+    const dC = dutyResult[index].duty.filter(element => 'D' === element).length
+    const eC = dutyResult[index].duty.filter(element => 'E' === element).length
+    const nC = dutyResult[index].duty.filter(element => 'N' === element).length
+    const mdC = dutyResult[index].duty.filter(element => 'MD' === element).length
+    switch (duty) {
+        case 'D':
+            if (needDayCount === dC) {
+                return true
+            } else {
+                return false
+            }
+            break ;
+        case 'E':
+            if (needEveningCount === eC) {
+                return true
+            } else {
+                return false
+            }
+            break ;
+        case 'N':
+            if (needNightCount === nC) {
+                return true
+            } else {
+                return false
+            }
+            break ;
+        case 'MD':
+            if (needMidDayCount === mdC) {
+                return true
+            } else {
+                return false
+            }
+            break ;
+        default:
+            console.log('isDone 함수의 switch 문에 예상치 못한 파라메터가 입력되었습니다')
+    }
+}
 
 
 
@@ -188,7 +264,9 @@ function dutyResultToEJS() {   // 일단 테스트 위해 사용하고 있는 �
 
 
 dutyResultInit()
-customDuty('최종서', 1, 'OF')
+customDuty('최종서', 1, 'D')
 
 
 dutyResultToEJS()
+
+console.log(isDone(2, 'MD'))
