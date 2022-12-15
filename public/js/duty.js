@@ -8,7 +8,7 @@ document.querySelector('#wrapper').className = 'boilerplate-wrapper-for-wide'
 // 이하 더미 데이터
 const members = [
     {id: 0, name: '박현숙', group: 'UM', duty: {1: 'X', 2: 'X', 3: 'X', 4: 'X', 5: 'X', 6: 'X', 7: 'X', 8: 'X', 9: 'X', 10: 'X', 11: 'X', 12: 'X', 13: 'X', 14: 'X', 15: 'X', 16: 'X', 17: 'X', 18: 'X', 19: 'X', 20: 'X', 21: 'X', 22: 'X', 23: 'X', 24: 'X', 25: 'X', 26: 'X', 27: 'X', 28: 'X', 29: 'X', 30: 'X', 31: 'X'}},
-    {id: 1, name: '안보라', group: 'CN', duty: {1: 'X', 2: 'X', 3: 'X', 4: 'X', 5: 'X', 6: 'X', 7: 'X', 8: 'X', 9: 'X', 10: 'X', 11: 'X', 12: 'X', 13: 'X', 14: 'X', 15: 'X', 16: 'X', 17: 'X', 18: 'X', 19: 'X', 20: 'X', 21: 'X', 22: 'X', 23: 'X', 24: 'X', 25: 'X', 26: 'X', 27: 'X', 28: 'X', 29: 'X', 30: 'X', 31: 'X'}},
+    {id: 1, name: '안보라', group: 'CN', duty: {1: 'OF', 2: 'D', 3: 'D', 4: 'OF', 5: 'D', 6: 'D', 7: 'D', 8: 'OF', 9: 'D', 10: 'D', 11: '연', 12: 'OF', 13: 'D', 14: 'D', 15: 'D', 16: 'D', 17: 'D', 18: 'OF', 19: 'D', 20: 'D', 21: 'D', 22: 'OF', 23: 'D', 24: 'D', 25: 'D', 26: 'OF', 27: 'D', 28: 'D', 29: 'D', 30: 'OF', 31: 'OF'}},
     {id: 2, name: '임현지', group: 'A', duty: {1: 'X', 2: 'X', 3: 'X', 4: 'X', 5: 'X', 6: 'X', 7: 'X', 8: 'X', 9: 'X', 10: 'X', 11: 'X', 12: 'X', 13: 'X', 14: 'X', 15: 'X', 16: 'X', 17: 'X', 18: 'X', 19: 'X', 20: 'X', 21: 'X', 22: 'X', 23: 'X', 24: 'X', 25: 'X', 26: 'X', 27: 'X', 28: 'X', 29: 'X', 30: 'X', 31: 'X'}},
     {id: 3, name: '박지은', group: 'A', duty: {1: 'X', 2: 'X', 3: 'X', 4: 'X', 5: 'X', 6: 'X', 7: 'X', 8: 'X', 9: 'X', 10: 'X', 11: 'X', 12: 'X', 13: 'X', 14: 'X', 15: 'X', 16: 'X', 17: 'X', 18: 'X', 19: 'X', 20: 'X', 21: 'X', 22: 'X', 23: 'X', 24: 'X', 25: 'X', 26: 'X', 27: 'X', 28: 'X', 29: 'X', 30: 'X', 31: 'X'}},
     {id: 4, name: '최종서', group: 'A', duty: {1: 'X', 2: 'X', 3: 'X', 4: 'X', 5: 'X', 6: 'X', 7: 'X', 8: 'X', 9: 'X', 10: 'X', 11: 'X', 12: 'X', 13: 'X', 14: 'X', 15: 'X', 16: 'X', 17: 'X', 18: 'X', 19: 'X', 20: 'X', 21: 'X', 22: 'X', 23: 'X', 24: 'X', 25: 'X', 26: 'X', 27: 'X', 28: 'X', 29: 'X', 30: 'X', 31: 'X'}},
@@ -26,39 +26,41 @@ const members = [
     {id: 16, name: '조윤빈', group: 'C', duty: {1: 'X', 2: 'X', 3: 'X', 4: 'X', 5: 'X', 6: 'X', 7: 'X', 8: 'X', 9: 'X', 10: 'X', 11: 'X', 12: 'X', 13: 'X', 14: 'X', 15: 'X', 16: 'X', 17: 'X', 18: 'X', 19: 'X', 20: 'X', 21: 'X', 22: 'X', 23: 'X', 24: 'X', 25: 'X', 26: 'X', 27: 'X', 28: 'X', 29: 'X', 30: 'X', 31: 'X'}},
 ]
 
+//cnName 변수는 members 배열에서 두 번째 인덱스의 이름을 참조하도록 하드코딩 되어있다.
+
 let dayOfMonth = 31
 
 let needDutyFull = [
-    {date: 1, D: 3, E: 3, N: 3, MD: 0},
-    {date: 2, D: 3, E: 3, N: 3, MD: 0},
-    {date: 3, D: 3, E: 3, N: 3, MD: 0},
+    {date: 1, D: 3, E: 3, N: 3, MD: 1},
+    {date: 2, D: 3, E: 3, N: 3, MD: 1},
+    {date: 3, D: 3, E: 3, N: 3, MD: 1},
     {date: 4, D: 3, E: 3, N: 3, MD: 0},
-    {date: 5, D: 3, E: 3, N: 3, MD: 0},
-    {date: 6, D: 3, E: 3, N: 3, MD: 0},
-    {date: 7, D: 3, E: 3, N: 3, MD: 0},
-    {date: 8, D: 3, E: 3, N: 3, MD: 0},
-    {date: 9, D: 3, E: 3, N: 3, MD: 0},
-    {date: 10, D: 3, E: 3, N: 3, MD: 0},
+    {date: 5, D: 3, E: 3, N: 3, MD: 1},
+    {date: 6, D: 3, E: 3, N: 3, MD: 1},
+    {date: 7, D: 3, E: 3, N: 3, MD: 1},
+    {date: 8, D: 3, E: 3, N: 3, MD: 1},
+    {date: 9, D: 3, E: 3, N: 3, MD: 1},
+    {date: 10, D: 3, E: 3, N: 3, MD: 1},
     {date: 11, D: 3, E: 3, N: 3, MD: 0},
-    {date: 12, D: 3, E: 3, N: 3, MD: 0},
-    {date: 13, D: 3, E: 3, N: 3, MD: 0},
-    {date: 14, D: 3, E: 3, N: 3, MD: 0},
-    {date: 15, D: 3, E: 3, N: 3, MD: 0},
-    {date: 16, D: 3, E: 3, N: 3, MD: 0},
+    {date: 12, D: 3, E: 3, N: 3, MD: 1},
+    {date: 13, D: 3, E: 3, N: 3, MD: 1}, // 4430 구현 후 4430 으로 고쳐서 테스트 해볼 것. 13일
+    {date: 14, D: 3, E: 3, N: 3, MD: 0}, // 4430 구현 후 4430 으로 고쳐서 테스트 해볼 것. 14일
+    {date: 15, D: 3, E: 3, N: 3, MD: 0}, // 4430 구현 후 4430 으로 고쳐서 테스트 해볼 것. 15일
+    {date: 16, D: 3, E: 3, N: 3, MD: 1},
     {date: 17, D: 3, E: 3, N: 3, MD: 0},
     {date: 18, D: 3, E: 3, N: 3, MD: 0},
-    {date: 19, D: 3, E: 3, N: 3, MD: 0},
-    {date: 20, D: 3, E: 3, N: 3, MD: 0},
-    {date: 21, D: 3, E: 3, N: 3, MD: 0},
-    {date: 22, D: 3, E: 3, N: 3, MD: 0},
-    {date: 23, D: 3, E: 3, N: 3, MD: 0},
+    {date: 19, D: 3, E: 3, N: 3, MD: 1},
+    {date: 20, D: 3, E: 3, N: 3, MD: 1},
+    {date: 21, D: 3, E: 3, N: 3, MD: 0}, // 4430 구현 후 4430 으로 고쳐서 테스트 해볼 것. 21일
+    {date: 22, D: 3, E: 3, N: 3, MD: 0}, // 4430 구현 후 4430 으로 고쳐서 테스트 해볼 것. 22일
+    {date: 23, D: 3, E: 3, N: 3, MD: 0}, // 4430 구현 후 4430 으로 고쳐서 테스트 해볼 것. 23일
     {date: 24, D: 3, E: 3, N: 3, MD: 0},
     {date: 25, D: 3, E: 3, N: 3, MD: 0},
-    {date: 26, D: 3, E: 3, N: 3, MD: 0},
-    {date: 27, D: 3, E: 3, N: 3, MD: 0},
-    {date: 28, D: 3, E: 3, N: 3, MD: 0},
-    {date: 29, D: 3, E: 3, N: 3, MD: 0},
-    {date: 30, D: 3, E: 3, N: 3, MD: 0},
+    {date: 26, D: 3, E: 3, N: 3, MD: 1},
+    {date: 27, D: 3, E: 3, N: 3, MD: 1},
+    {date: 28, D: 3, E: 3, N: 3, MD: 1},
+    {date: 29, D: 3, E: 3, N: 3, MD: 1},
+    {date: 30, D: 3, E: 3, N: 3, MD: 1},
     {date: 31, D: 3, E: 3, N: 3, MD: 0},
 ]
 // 이상 더미 데이터
@@ -123,7 +125,7 @@ function isDone(date, name) {
         return true
     }
 }
-function selectMembersToReturnObject(membersArray, dutyStyle) {
+function selectMembersToReturnObject(date, membersArray, dutyStyle) {
     let resultObject = {D: [], E: [], N: [], MD: []}
     let membersA = []
     let membersB = []
@@ -205,6 +207,56 @@ function selectMembersToReturnObject(membersArray, dutyStyle) {
             }
         }
     }
+    let forDeleteMembers = []
+    for (member of members) {
+        if (member.duty[date] === 'D' || member.duty[date] === 'E' || member.duty[date] === 'N' || member.duty[date] === 'MD') {
+            const obj = {name: member.name, group: member.group, duty: member.duty[date]}
+            forDeleteMembers.push(obj)
+        }
+    }
+    if (forDeleteMembers.length !== 0) {
+        for (member of forDeleteMembers) {
+            if (member.group === 'CN' || member.group === 'A') {
+                if (member.duty === 'D') {
+                    resultObject.D.splice(0, 1)
+                } else if (member.duty === 'E') {
+                    resultObject.E.splice(0, 1)
+                } else if (member.duty === 'N') {
+                    resultObject.N.splice(0, 1)
+                } else if (member.duty === 'MD') {
+                    resultObject.MD.splice(0, 1)
+                } else {
+                    console.log('selectMembersToReturnObject의 "forDeleteMembers.length !==0..." 에서 오류가 발생했습니다.')
+                }
+            }
+            if (member.group === 'B') {
+                if (member.duty === 'D') {
+                    resultObject.D.splice(1, 1)
+                } else if (member.duty === 'E') {
+                    resultObject.E.splice(1, 1)
+                } else if (member.duty === 'N') {
+                    resultObject.N.splice(1, 1)
+                } else if (member.duty === 'MD') {
+                    resultObject.MD.splice(0, 1)
+                } else {
+                    console.log('selectMembersToReturnObject의 "forDeleteMembers.length !==0..." 에서 오류가 발생했습니다.')
+                }
+            }
+            if (member.group === 'C') {
+                if (member.duty === 'D') {
+                    resultObject.D.pop
+                } else if (member.duty === 'E') {
+                    resultObject.E.pop
+                } else if (member.duty === 'N') {
+                    resultObject.N.pop
+                } else if (member.duty === 'MD') {
+                    resultObject.MD.pop
+                } else {
+                    console.log('selectMembersToReturnObject의 "forDeleteMembers.length !==0..." 에서 오류가 발생했습니다.')
+                }
+            }
+        }
+    }
     return resultObject
 }
 function dutyMakerForOneDate(date) {
@@ -226,13 +278,13 @@ function dutyMakerForOneDate(date) {
     let dutyStyle = 0
     if (needDay === 3 && needEvening === 3 && needNight === 3 && needMidday === 0) {
         dutyStyle = 3330
-        tempDutyForOneDay = selectMembersToReturnObject(membersForOneDay, dutyStyle)
+        tempDutyForOneDay = selectMembersToReturnObject(date, membersForOneDay, dutyStyle)
     } else if (needDay === 4 && needEvening === 4 && needNight === 3 && needMidday === 0) {
         dutyStyle = 4430
-        tempDutyForOneDay = selectMembersToReturnObject(membersForOneDay, dutyStyle)
+        tempDutyForOneDay = selectMembersToReturnObject(date, membersForOneDay, dutyStyle)
     } else if (needDay === 3 && needEvening === 3 && needNight === 3 && needMidday === 1) {
         dutyStyle = 3331
-        tempDutyForOneDay = selectMembersToReturnObject(membersForOneDay, dutyStyle)
+        tempDutyForOneDay = selectMembersToReturnObject(date, membersForOneDay, dutyStyle)
     } else {
         console.log('근무 형태는 3331, 4430, 3330 세 가지만 가능합니다. 기타 근무 형태는 추가 개발이 필요합니다. dutyMakerForOneDate 함수의 dutyStyle 변수를 확인하세요')
     }
@@ -253,5 +305,4 @@ dutyResultToEJS()
 
 
 // 테스트 할 코드를 아래에 작성하세요
-
-dutyMakerForOneDate(1)
+dutyMakerForOneDate(10)
