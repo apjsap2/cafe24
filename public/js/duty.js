@@ -101,7 +101,7 @@ function dutyResultToEJS() {
 // 이상 프론트엔드
 
 function findMemberIndex(name) {
-    for (let i = 0; i < members.letemngth; i++) {
+    for (let i = 0; i < members.length; i++) {
         if (members[i].name === name) {
             return i
         }
